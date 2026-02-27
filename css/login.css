@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+#loginMainContainer {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 40px;
+    box-sizing: border-box;
+}
+
+#loginCard {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    border: 1px solid #dfe7f1;
+    border-radius: 14px;
+    padding: 26px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(33, 47, 61, 0.09);
+}
+
+#loginCard h1 {
+    margin: 0 0 8px;
+}
+
+#loginSubText {
+    margin: 0 0 18px;
+    color: #4b5969;
+}
+
+.formGroup {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formGroup label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.formGroup input {
+    border: 1px solid #ccd7e5;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #95bcd4;
+}
+
+#loginMessage {
+    min-height: 20px;
+    font-size: 13px;
+    margin: 6px 0 12px;
+}
+
+#loginMessage.error {
+    color: #cc2b2b;
+}
+
+#loginMessage.success {
+    color: #1f7a1f;
+}
+
+#loginBtn {
+    width: 100%;
+    border: none;
+    background: #0092c9;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#loginBtn:hover {
+    background: #007baa;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> LOGIN | E-COMMERCE WEBSITE BY EDYODA </title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <div id="loginMainContainer">
+        <div id="loginCard">
+            <h1>Login</h1>
+            <p id="loginSubText">Sign in to continue to checkout.</p>
+            <form id="loginForm">
+                <div class="formGroup">
+                    <label for="name">Name (optional)</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+                <div class="formGroup">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <p id="loginMessage"></p>
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+<div id="4"></div>
+<script>
+    load("footer.html");
+    function load(url)
+    {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+    }
+</script>
+<script src="store.js"></script>
+<script src="login.js"></script>
+</html>

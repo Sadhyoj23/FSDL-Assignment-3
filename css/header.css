@@ -1,0 +1,182 @@
+﻿body {
+    margin: 0;
+}
+
+#container {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.3fr 2fr 4fr 1fr;
+    font-family: 'Lato', sans-serif;
+    z-index: 5;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 34px;
+    box-sizing: border-box;
+    position: fixed;
+    box-shadow: 0 6px 18px rgba(33, 47, 61, 0.15);
+}
+
+#shopName {
+    font-size: 34px;
+}
+
+#shopName a,
+#collection a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+#shopName > b {
+    font-weight: 900;
+}
+
+#collection {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 12px;
+    justify-content: start;
+    font-size: 13px;
+}
+
+.search {
+    padding: 14px;
+    color: rgb(29, 29, 29);
+    min-width: 25px;
+    text-align: center;
+    position: absolute;
+}
+
+#search {
+    position: relative;
+}
+
+#input {
+    width: 100%;
+    max-width: 33em;
+    height: 3em;
+    padding: 2px 50px;
+    background-color: #f3f6fb;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+}
+
+#input:focus {
+    outline: none;
+    border-color: #95bcd4;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cartWrap {
+    color: rgb(29, 29, 29);
+    position: relative;
+    margin-right: 18px;
+}
+
+.addedToCart {
+    font-size: 1.5em;
+}
+
+#badge {
+    position: absolute;
+    background-color: #ff3d57;
+    color: white;
+    border-radius: 999px;
+    padding: 2px 7px;
+    font-size: 12px;
+    top: -10px;
+    right: -14px;
+    min-width: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.userIcon {
+    font-size: 40px;
+}
+
+#user a {
+    color: rgb(29, 29, 29)
+}
+
+.authWrap {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#authName {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#logoutBtn {
+    border: 1px solid #d6dde8;
+    background: #ffffff;
+    color: #1d1d1d;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+}
+
+#logoutBtn:hover {
+    background: #f5f8fc;
+}
+
+@media(max-width: 1200px) {
+    #container {
+        grid-template-columns: 1.2fr 2fr 3fr 1fr;
+    }
+
+    #shopName {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 1000px) {
+    #container {
+        grid-template-columns: 1.2fr 2fr 1fr;
+    }
+
+    #search {
+        display: none;
+    }
+}
+
+@media(max-width: 740px) {
+    #container {
+        padding: 14px 20px;
+    }
+
+    #shopName {
+        font-size: 24px;
+    }
+
+    #collection {
+        font-size: 11px;
+        gap: 8px;
+    }
+
+    .userIcon {
+        font-size: 32px;
+    }
+
+    #authName {
+        display: none;
+    }
+}

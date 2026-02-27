@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CHECKOUT | E-COMMERCE WEBSITE BY EDYODA </title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <div id="checkoutMainContainer">
+        <h1>Checkout</h1>
+        <div id="checkoutContainer">
+            <div id="orderSummary">
+                <h2>Order Summary</h2>
+                <div id="summaryItems"></div>
+                <div id="summaryTotal"></div>
+            </div>
+
+            <div id="checkoutForm">
+                <h2>Shipping & Payment Information</h2>
+                <form id="checkoutFormData">
+                    <div class="formGroup"><label for="name">Full Name:</label><input type="text" id="name" required></div>
+                    <div class="formGroup"><label for="email">Email:</label><input type="email" id="email" required></div>
+                    <div class="formGroup"><label for="phone">Phone:</label><input type="tel" id="phone" required></div>
+                    <div class="formGroup"><label for="address">Shipping Address:</label><textarea id="address" required></textarea></div>
+                    <div class="formGroup"><label for="city">City:</label><input type="text" id="city" required></div>
+                    <div class="formGroup"><label for="zip">ZIP Code:</label><input type="text" id="zip" required></div>
+                    <div class="formGroup"><label for="cardNumber">Card Number:</label><input type="text" id="cardNumber" placeholder="4111 1111 1111 1111" required></div>
+                    <div class="formGroup"><label for="expiry">Expiry Date:</label><input type="text" id="expiry" placeholder="MM/YY" required></div>
+                    <div class="formGroup"><label for="cvv">CVV:</label><input type="password" id="cvv" maxlength="4" required></div>
+
+                    <div class="otpBlock">
+                        <button type="button" id="sendOtpBtn">Authenticate Payment</button>
+                        <input type="text" id="otp" placeholder="Enter OTP">
+                        <p id="otpStatus" class="otpInfo">Authenticate payment to continue.</p>
+                    </div>
+
+                    <button type="submit" id="placeOrderBtn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<div id="4"></div>
+<script>
+    load("footer.html");
+    function load(url)
+    {
+        req = new XMLHttpRequest();
+        req.open("GET", url, false);
+        req.send(null);
+        document.getElementById(4).innerHTML = req.responseText;
+    }
+</script>
+<script src="store.js"></script>
+<script src="checkout.js"></script>
+</html>
